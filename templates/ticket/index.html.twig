@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+
+
+
+    {% if ticket %}
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+                <h4 class="card-title"> {{ ticket.titre }} </h4>
+                <p class="card-text"> Person name : {{ ticket.nompersonne }}
+                    <br>Description : {{ ticket.description }}
+                    <br>Statut : {{ ticket.statut }}
+                    <br>Date : {{ ticket.date }}
+                </p>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+{% block title %}
+    ticket
+{% endblock %}
